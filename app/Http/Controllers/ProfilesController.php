@@ -14,4 +14,10 @@ class ProfilesController extends Controller
             'user'=> User::findOrFail($user),
         ]);
     }
+    public function edit(\App\Models\User $user){
+        return view('profiles/edit',compact($user));
+    }
+    public function update(\App\Models\User $user){
+        return view('profiles/edit',compact($user));
+    }
 }
