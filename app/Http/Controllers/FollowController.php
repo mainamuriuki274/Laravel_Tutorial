@@ -8,6 +8,6 @@ use Illuminate\Http\Request;
 class FollowController extends Controller
 {
     public function follow(User $user){
-        return $user->username;
+        return auth()->user()->following()->toggle($user->profile);
     }
 }
